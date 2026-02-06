@@ -12,6 +12,8 @@ A clear explanation of virtualization vs containerization, with examples and how
 
 **Point:** One physical server → many “fake” servers, each with a complete OS.
 
+![Virtualization](/images/docker/vitualization.webp)
+
 ### Example: Virtualization
 
 ```
@@ -34,6 +36,8 @@ Physical Host (e.g., Linux)
 - **Docker** is a popular platform that builds, ships, and runs containers using images and a container runtime.
 
 **Point:** One OS kernel → many isolated “boxes” (containers), each with just what the app needs.
+
+![Devops With Containerization](/images/docker/containerization.webp)
 
 ### Example: Containerization (Docker)
 
@@ -71,14 +75,14 @@ Let’s break down how virtualization works with the help of a diagram.
 
 **Bare-Metal Hypervisor Setup (Type 1)**
 
-![Bare-Metal Hypervisor](/docker/bare_metal_hypervisor.webp)
+![Bare-Metal Hypervisor](/images/docker/bare_metal_hypervisor.webp)
 
 - The hypervisor is directly installed on the physical server.
 - Multiple virtual machines (VMs) can run on top of it each with its own operating system and resources.
 
 **Hosted Hypervisor Setup (Type 2)**
 
-![Hosted Hypervisor](/docker/hosted_hypervisor_1.webp)
+![Hosted Hypervisor](/images/docker/hosted_hypervisor_1.webp)
 
 - The host OS is installed first, followed by the hypervisor.
 - Virtual machines run on top of the host OS and the hypervisor.
@@ -106,6 +110,8 @@ While virtualization is powerful, it has a flaw. Every Virtual Machine requires 
 ---
 
 ## 4. Docker vs Virtual Machine — Main Differences
+
+![Docker vs. Virtual Machine](/images/docker/docker_vs_vm.webp)
 
 ### 4.1 Architecture
 
@@ -160,7 +166,7 @@ A piece of software called a hypervisor, or Virtual Machine manager lets you run
 
 The following Figure illustrates clearly that Hypervisor software isolating the physical Hardware on top of Host operating System, Creating different virtual machines.
 
-![Working of VM](/docker/working_of_vm.png)
+![Working of VM](/images/docker/working_of_vm.png)
 
 ### How Does Docker Work?
 
@@ -168,7 +174,7 @@ Unlike a VM, Docker does not use hypervisor, rather it runs on top of the host o
 
 The following Diagram illustrates Docker provides docker client as interact mode to the User, from their it will take the respective requests through Commands execution, those Requests are evaluated in the Docker Host and provides the respective operations such as creating, pulling and pushing the images , creating containers etc.. It fetches the docker images from the Docker Registery if trying to use precreated docker images.
 
-![Working of Docker](/docker/working_of_docker.png)
+![Working of Docker](/images/docker/working_of_docker.png)
 
 ## 5. When to Use Which?
 
